@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="mylist">
+        <li>milk</li>
+        <li>coffe</li>
+        <li> bruh</li>
+    </ul>
+        
+    <p id="myDiv"></p>
+    <p class =myClass></p>
+    <p class="myClass">this is class</p>
+    <p class="myClass"></p>
+    <h1>JavaScript async / await</h1>
+    <h2 id="demo"></h2>
+
+    
+    
+</body>
+<script>
+    let x=document.getElementById("myDiv");
+    x.innerHTML="THIS IS MY NEW TEXT";
+
+
+    let myclass=document.getElementsByClassName("myClass");
+    for(let i=0;i<myclass.length;i++){
+        myclass[i].innerHTML="this is the text in class ";
+
+    }
+
+    let keer =document.getElementsByTagName("p");
+    for(let i=0;i<keer.length;i++){
+        keer[i].style.color="red";
+    }
+     
+
+    let para=document.createElement("h1");
+    para.textContent="this is a heading";
+    document.body.appendChild(para);
+     
+    const list =document.getElementById("mylist")
+    list.removeChild(list.children[1]);
+
+    async function myDisplay() {
+        let myPromise = new Promise(function(resolve, reject) {
+          resolve("I love You !!");
+        });
+        document.getElementById("demo").innerHTML = await myPromise;
+      }
+      
+      myDisplay();
+
+
+
+</script>
+</html>
+
+   
